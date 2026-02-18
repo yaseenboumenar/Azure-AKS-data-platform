@@ -43,3 +43,5 @@ public static async Task Run(EventData[] events, ILogger log)
     if (exceptions.Count == 1)
         throw exceptions.Single();
 }
+
+//
