@@ -1,0 +1,9 @@
+{
+	"name": "adf-miller-insurance-dp",
+	"location": "uksouth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "4e3b6a6c-3a7c-4d4b-83d2-7f72ae6a0c4b",
+		"tenantId": "fb7ebc6e-028a-45fd-96fd-8072b89a5346"
+	}
+}
