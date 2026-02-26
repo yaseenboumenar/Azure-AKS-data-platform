@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": "onprem_params_broker.json",
-				"folderPath": "source_input/onprem",
+				"folderPath": "source_input/onprem/data_loads/broker",
 				"fileSystem": "raw"
 			}
 		},
