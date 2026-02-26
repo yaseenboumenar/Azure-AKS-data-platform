@@ -1,5 +1,5 @@
 {
-	"name": "pl_raw_to_bronze",
+	"name": "pl_raw_to_bronze_broker",
 	"properties": {
 		"activities": [
 			{
@@ -13,6 +13,7 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
+				"userProperties": [],
 				"typeProperties": {
 					"source": {
 						"type": "JsonSource",
@@ -59,6 +60,10 @@
 							"container_name": {
 								"value": "@activity('onprem parameters').output.value[0].container_name",
 								"type": "Expression"
+							},
+							"folder_name": {
+								"value": "@activity('onprem parameters').output.value[0].folder_name",
+								"type": "Expression"
 							}
 						}
 					},
@@ -67,11 +72,73 @@
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
 						"type": "DelimitedTextReadSettings"
 					}
+				}
+			},
+			{
+				"name": "ForEachDt",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Get raw data",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Get raw data').output.childItems",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "If date is current date",
+							"type": "IfCondition",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"expression": {
+									"value": "@or(equals(item().name, concat('dt=', formatDateTime(utcNow(), 'yyyy-MM-dd'))), equals(item().name, concat('dt=', formatDateTime(addDays(utcNow(),-1) , 'yyyy-MM-dd'))))",
+									"type": "Expression"
+								},
+								"ifTrueActivities": [
+									{
+										"name": "ETL_daily_load",
+										"type": "DatabricksNotebook",
+										"dependsOn": [],
+										"policy": {
+											"timeout": "0.12:00:00",
+											"retry": 0,
+											"retryIntervalInSeconds": 30,
+											"secureOutput": false,
+											"secureInput": false
+										},
+										"userProperties": [],
+										"typeProperties": {
+											"notebookPath": "/Shared/adf-lab",
+											"baseParameters": {
+												"name": {
+													"value": "@item().name",
+													"type": "Expression"
+												}
+											}
+										},
+										"linkedServiceName": {
+											"referenceName": "ls_adf_to_dbx_lab",
+											"type": "LinkedServiceReference"
+										}
+									}
+								]
+							}
+						}
+					]
 				}
 			}
 		],
