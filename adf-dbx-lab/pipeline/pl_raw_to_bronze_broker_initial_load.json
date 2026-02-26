@@ -122,7 +122,7 @@
 										},
 										"userProperties": [],
 										"typeProperties": {
-											"notebookPath": "/Shared/adf-lab",
+											"notebookPath": "/Shared/ETL_initial_load",
 											"baseParameters": {
 												"name": {
 													"value": "@item().name",
