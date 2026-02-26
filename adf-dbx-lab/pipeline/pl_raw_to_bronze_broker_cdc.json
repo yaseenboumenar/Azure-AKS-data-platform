@@ -105,7 +105,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@or(equals(item().name, concat('dt=', formatDateTime(utcNow(), 'yyyy-MM-dd'))), equals(item().name, concat('dt=', formatDateTime(addDays(utcNow(),-1) , 'yyyy-MM-dd'))))",
+									"value": "@equals(item().name, concat('dt=', formatDateTime(utcNow(), 'yyyy-MM-dd')))",
 									"type": "Expression"
 								},
 								"ifTrueActivities": [
