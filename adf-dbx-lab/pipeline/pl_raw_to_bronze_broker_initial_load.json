@@ -105,12 +105,12 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@equals(item().name, concat('dt=', formatDateTime(addDays(utcNow(), -1, 'yyyy-MM-dd'))))",
+									"value": "@equals(item().name, concat('dt=', formatDateTime(addDays(utcNow(), -1), 'yyyy-MM-dd')))",
 									"type": "Expression"
 								},
 								"ifTrueActivities": [
 									{
-										"name": "ETL_daily_load",
+										"name": "ETL_initial_load",
 										"type": "DatabricksNotebook",
 										"dependsOn": [],
 										"policy": {
