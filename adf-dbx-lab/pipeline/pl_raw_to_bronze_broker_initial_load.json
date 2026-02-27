@@ -99,13 +99,13 @@
 					},
 					"activities": [
 						{
-							"name": "If date is current date",
+							"name": "If date is initial load date",
 							"type": "IfCondition",
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@equals(item().name, concat('dt=', formatDateTime(utcNow(), 'yyyy-MM-dd')))",
+									"value": "@equals(item().name, concat('dt=', formatDateTime(addDays(utcNow(), -1, 'yyyy-MM-dd'))))",
 									"type": "Expression"
 								},
 								"ifTrueActivities": [
