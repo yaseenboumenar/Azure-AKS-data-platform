@@ -64,6 +64,14 @@
 							"raw_folder_path": {
 								"value": "@activity('onprem parameters').output.value[0].raw_folder_path",
 								"type": "Expression"
+							},
+							"bronze_container_name": {
+								"value": "@activity('onprem parameters').output.value[0].bronze_container_name",
+								"type": "Expression"
+							},
+							"bronze_folder_path": {
+								"value": "@activity('onprem parameters').output.value[0].bronze_folder_path",
+								"type": "Expression"
 							}
 						}
 					},

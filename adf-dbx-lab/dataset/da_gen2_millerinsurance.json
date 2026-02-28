@@ -17,6 +17,9 @@
 			},
 			"bronze_folder_path": {
 				"type": "string"
+			},
+			"storage_account": {
+				"type": "string"
 			}
 		},
 		"annotations": [],
