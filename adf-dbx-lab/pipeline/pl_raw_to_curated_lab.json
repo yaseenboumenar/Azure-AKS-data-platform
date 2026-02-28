@@ -54,8 +54,8 @@
 						"referenceName": "da_gen2_millerinsurance",
 						"type": "DatasetReference",
 						"parameters": {
-							"container_name": "raw",
-							"folder_name": "lab"
+							"raw_container_name": "raw",
+							"raw_folder_path": "lab"
 						}
 					}
 				],
@@ -64,8 +64,8 @@
 						"referenceName": "da_gen2_millerinsurance",
 						"type": "DatasetReference",
 						"parameters": {
-							"container_name": "curated",
-							"folder_name": "lab"
+							"raw_container_name": "curated",
+							"raw_folder_path": "lab"
 						}
 					}
 				]
@@ -94,8 +94,8 @@
 						"referenceName": "da_gen2_millerinsurance",
 						"type": "DatasetReference",
 						"parameters": {
-							"container_name": "curated",
-							"folder_name": "lab"
+							"raw_container_name": "curated",
+							"raw_folder_path": "lab"
 						}
 					},
 					"fieldList": [

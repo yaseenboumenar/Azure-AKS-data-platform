@@ -57,11 +57,11 @@
 						"referenceName": "da_gen2_millerinsurance",
 						"type": "DatasetReference",
 						"parameters": {
-							"container_name": {
+							"raw_container_name": {
 								"value": "@activity('onprem parameters').output.value[0].container_name",
 								"type": "Expression"
 							},
-							"folder_name": {
+							"raw_folder_path": {
 								"value": "@activity('onprem parameters').output.value[0].folder_name",
 								"type": "Expression"
 							}

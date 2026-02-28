@@ -6,10 +6,16 @@
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"container_name": {
+			"raw_container_name": {
 				"type": "string"
 			},
-			"folder_name": {
+			"raw_folder_path": {
+				"type": "string"
+			},
+			"bronze_container_name": {
+				"type": "string"
+			},
+			"bronze_folder_path": {
 				"type": "string"
 			}
 		},
