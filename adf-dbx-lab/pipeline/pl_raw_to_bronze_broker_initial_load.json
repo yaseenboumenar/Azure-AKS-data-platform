@@ -145,18 +145,15 @@
 													"type": "Expression"
 												},
 												"raw_container_name": "@activity('onprem parameters').output.value[0].raw_container_name",
-												"raw_folder_path": {
-													"value": "@activity('onprem parameters').output.value[0].raw_folder_path",
-													"type": "Expression"
-												},
 												"bronze_container_name": {
 													"value": "@activity('onprem parameters').output.value[0].bronze_container_name",
 													"type": "Expression"
 												},
-												"bronze_folder_path": {
-													"value": "@activity('onprem parameters').output.value[0].bronze_folder_path",
+												"silver_container_name": {
+													"value": "@activity('onprem parameters').output.value[0].silver_container_name",
 													"type": "Expression"
-												}
+												},
+												"folder_path": "@activity('onprem parameters').output.value[0].bronze_folder_path"
 											}
 										},
 										"linkedServiceName": {
