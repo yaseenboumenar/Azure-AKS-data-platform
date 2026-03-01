@@ -66,11 +66,15 @@
 								"type": "Expression"
 							},
 							"silver_container_name": {
-								"value": "@activity('onprem parameters').output.value[0].bronze_folder_path",
+								"value": "@activity('onprem parameters').output.value[0].silver_container_name",
 								"type": "Expression"
 							},
 							"storage_account": {
 								"value": "@activity('onprem parameters').output.value[0].storage_account",
+								"type": "Expression"
+							},
+							"folder_path": {
+								"value": "@activity('onprem parameters').output.value[0].folder_path",
 								"type": "Expression"
 							}
 						}
@@ -145,16 +149,16 @@
 													"value": "@activity('onprem parameters').output.value[0].raw_container_name",
 													"type": "Expression"
 												},
-												"raw_folder_path": {
-													"value": "@activity('onprem parameters').output.value[0].raw_folder_path",
-													"type": "Expression"
-												},
 												"bronze_container_name": {
 													"value": "@activity('onprem parameters').output.value[0].bronze_container_name",
 													"type": "Expression"
 												},
-												"bronze_folder_path": {
-													"value": "@activity('onprem parameters').output.value[0].bronze_folder_path",
+												"silver_container_name": {
+													"value": "@activity('onprem parameters').output.value[0].silver_container_name",
+													"type": "Expression"
+												},
+												"folder_path": {
+													"value": "@activity('onprem parameters').output.value[0].folder_path",
 													"type": "Expression"
 												}
 											}
