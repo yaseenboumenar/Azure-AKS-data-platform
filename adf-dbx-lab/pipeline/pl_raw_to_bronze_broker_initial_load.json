@@ -153,7 +153,10 @@
 													"value": "@activity('onprem parameters').output.value[0].silver_container_name",
 													"type": "Expression"
 												},
-												"folder_path": "@activity('onprem parameters').output.value[0].bronze_folder_path"
+												"folder_path": {
+													"value": "@activity('onprem parameters').output.value[0].folder_path",
+													"type": "Expression"
+												}
 											}
 										},
 										"linkedServiceName": {
