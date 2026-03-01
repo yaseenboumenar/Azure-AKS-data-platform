@@ -9,16 +9,16 @@
 			"raw_container_name": {
 				"type": "string"
 			},
-			"raw_folder_path": {
-				"type": "string"
-			},
 			"bronze_container_name": {
 				"type": "string"
 			},
-			"bronze_folder_path": {
+			"silver_container_name": {
 				"type": "string"
 			},
 			"storage_account": {
+				"type": "string"
+			},
+			"folder_path": {
 				"type": "string"
 			}
 		},

@@ -55,7 +55,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"raw_container_name": "raw",
-							"raw_folder_path": "lab"
+							"folder_path": "lab"
 						}
 					}
 				],
@@ -65,7 +65,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"raw_container_name": "curated",
-							"raw_folder_path": "lab"
+							"folder_path": "lab"
 						}
 					}
 				]
@@ -95,7 +95,7 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"raw_container_name": "curated",
-							"raw_folder_path": "lab"
+							"folder_path": "lab"
 						}
 					},
 					"fieldList": [
